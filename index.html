@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodiyapaWeather</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <body >
+      <p>This data will be updated dynamically.</p>
+   </body>
+
+
+<div  class="app container">
+  <div class="SBOX"> <h3> Search By City</h3>
+ <input id="searchbox" type="search"></input>
+  <button id="searchbutton">Search</button>
+  </div>
+  <div class="header">
+    <span class="loc" >
+      <a href="#"><i class="fa fa-map-marker"></i></a>
+    </span>
+    <span>
+      <span class="location" width="10">------</span>&nbsp;
+      <span class="sel"><a href="#" class="selected" id="C"><sup>o</sup>C</a> <a href="#" class="unselected" id="F"><sup>o</sup>F</a></span>
+    </span>
+  </div>
+
+
+
+  <div class="weather">
+    <div class="today text-center">
+      <h2>Today</h2><br/><div id="txt1"></div><br/><b><div id="txt"></b></div>
+        <h3 class="current">
+          <span class="temp">--</span><sup>o</sup><span class="scale">C</span> 
+          <br/> </h3><h4><span class="description">-------</span></h4>
+       
+        <h4>
+          Maximum : <span class="max">--</span><sup>o</sup><span class="scale">C</span>
+          <br/> Minimum : <span class="min">--</span><sup>o</sup><span class="scale">C</span>          
+        </h4>
+        <div class="param text-center">Humidity: <span class="humidity">--</span>%, Wind Speed: <span class="wind">--</span>m/s, Clouds: <span class="rain">--</span>%, Pressure:  <span class="pressure">-- </span> mb,<br/> Sunrise: <span class="sunrise">-- </span> Sunset:  <span class="sunset">-- <br/></span>
+        </div>
+    </div>
+    
+  </div> 
+<br/>
+  <h4><div class="footer">Getting Weather</div></h4>
+<div class="daily row">
+        
+</div>
+  
+  
+ 
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

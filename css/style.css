@@ -1,0 +1,143 @@
+body{
+background: #f7ff00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #db36a4, #f7ff00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+.loc a{
+  max-width:100px;
+  color:#32CD32;
+}
+.today h2{
+  margin:5px;
+  margin-bottom:-5px;
+  
+}
+.loc a:hover{
+  color:#fff;
+  max-width:100px;
+  text-decoration:none;
+}
+.weather{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background:rgba(220,220,220,0.6);
+  border-radius:20px;
+  padding:10px;
+}
+.sel{
+  padding:6px 2px;
+ background-color:white;
+  border-radius:6px;
+  position:absolute;
+  left:400px;
+  top:10px;
+  font-size:16px;
+}
+.current{
+  font-size:30px;
+  color:#313;
+  font-weight:bold;
+}
+.selected{
+  background-color:#f7ff00;
+  padding:3px;
+  border-radius:2px;
+  border:1px solid black;
+}
+.sel a:hover{
+  text-decoration:none;
+}
+.sel a:active{
+  text-decoration:none;
+}
+.sel a:visited{
+  text-decoration:none;
+}
+.unselected{
+  background-color:white;
+  color:black;
+  padding:3px 2px;
+}
+.app{
+  margin-top:20px;
+  
+  width:500px;
+  height:700px;
+  border-radius:0px;
+  background:##32CD32;
+  border:2px solid #ddd;
+  box-shadow:0px 0px 16px 4px #aaa;
+  background-size: 300px 500px;
+  background-repeat: no-repeat;
+}
+.header{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  position:relative;
+  top:-4px;
+  left:-19px;
+  height:50px;
+  width:501px;
+  
+
+  border-radius:0px 0px 0px 0px;
+  color:white;
+  padding:10px 10px;
+  font-size:22px;
+  overflow:hidden;
+}
+.param{
+  font-size:20px;
+  text-align:center;
+  padding-top:10px;
+  padding-bottom:20px;
+  color:#325;
+  font-weight:bolder;
+  border-bottom:2px solid #99e;
+}
+.daily{
+  border-radius:15px;
+  border:2px solid #9e9;
+  padding:15px 0px 20px 0px;
+  width:270px;
+  margin-left:1px;
+  position:relative;
+  background:linear-gradient(70deg,#ded,#fff,#efe);
+  visibility:hidden;
+  z-index:2;
+}
+.footer{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  position:absolute;
+  top:650px;
+  margin-left:-30px;
+  text-align:center;
+  
+  
+
+  color:black;
+  width:499px;
+  height:120px;
+  padding:5px 0px;
+  border-radius:0px 0px 00px 00px;
+  z-index:10;
+}
+.next-btn{
+  width:80px;
+  height:40px;
+  margin-top:10px;
+}
+
+.SBOX{
+  font-size:20px;
+  text-align:center;
+  padding-top:10px;
+  padding-bottom:20px;
+  color:#325;
+  font-weight:bolder;
+  border-bottom:2px solid #99e;
+  
+}
+
+
