@@ -91,6 +91,15 @@ function getTimeFromDate(timestamp) {
   
   getdate();
   
+  
+  var input = document.getElementById("searchbox");
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    $("#searchbutton").click();
+  }
+});
+  
   $("#searchbutton").click(function() {
   fh=0,fpress=0,fwspeed=0,ftempp=0,ftempmax=0,ftempmin=0;
     ss=0,sr=0,fsr=0,fss=0;
