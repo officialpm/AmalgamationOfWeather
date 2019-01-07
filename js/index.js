@@ -121,19 +121,21 @@ linkr[2]="https://api.weatherbit.io/v2.0/forecast/daily?&city="+rcity+"&units=I&
 
 linkr[3]="https://api.apixu.com/v1/forecast.json?key=c94f96cab7914f7a98c173036182012&q="+rcity;
     var tempp0;
-   $.ajax({async: false ,
- url: linkr[0], success: function(results){
+      $.ajax({
+      async: false ,
+ url:linkr[1], success: function(results) {
    report[0]=results;
-    h[0]=results.query.results.channel.atmosphere.humidity;
-    press[0]=results.query.results.channel.atmosphere.pressure;
-    wspeed[0]=results.query.results.channel.wind.speed;
-   tempp[0]=results.query.results.channel.item.condition.temp;
-    tempmax[0]=results.query.results.channel.item.forecast[0].high;
-    tempmin[0]=results.query.results.channel.item.forecast[0].low;
-   rise[0]=results.query.results.channel.astronomy.sunrise;
-   set[0]=results.query.results.channel.astronomy.sunset;
+   h[0]=results.main.humidity;
+   press[0]=results.main.pressure;
+   wspeed[0]=results.wind.speed;
+   tempp[0]=results.main.temp;
+   tempmax[0]=results.main.temp_max;
+   tempmin[0]=results.main.temp_min;
+   rise[0]=results.sys.sunrise;
+   set[0]=results.sys.sunset;
     }
 });
+    
     
  
     
@@ -321,25 +323,27 @@ function checkTime(i) {
     
    
     
-   $.ajax({async: false ,
- url:link[0], success: function(yresults){
-    report[0]=yresults;
-    h[0]=yresults.query.results.channel.atmosphere.humidity;
-    press[0]=yresults.query.results.channel.atmosphere.pressure;
-    wspeed[0]=yresults.query.results.channel.wind.speed;
-    tempp[0]=yresults.query.results.channel.item.condition.temp;
-    tempmax[0]=yresults.query.results.channel.item.forecast[0].high;
-    tempmin[0]=yresults.query.results.channel.item.forecast[0].low;
-   rise[0]=results.query.results.channel.astronomy.sunrise;
-   set[0]=results.query.results.channel.astronomy.sunset;
+     $.ajax({
+      async: false ,
+ url:link[1], success: function(results) {
+   report[0]=results;
+   h[0]=results.main.humidity;
+   press[0]=results.main.pressure;
+   wspeed[0]=results.wind.speed;
+   tempp[0]=results.main.temp;
+   tempmax[0]=results.main.temp_max;
+   tempmin[0]=results.main.temp_min;
+   rise[0]=results.sys.sunrise;
+   set[0]=results.sys.sunset;
     }
 });
+    
     
    
     //Wed Jun 20 19:20:44 +0000 2018"
    // var ydr= Date.parse("Wed Jun 20 19:20:44 +0000 2012")
     
-  /*  $.ajax({
+   $.ajax({
       async: false ,
  url:link[1], success: function(results) {
    report[1]=results;
@@ -353,8 +357,7 @@ function checkTime(i) {
    set[1]=results.sys.sunset;
     }
 });
-    */
-   /*
+    
     
   $.ajax({global: false,
     async:false,
@@ -371,9 +374,9 @@ function checkTime(i) {
    set[2]=dresults.data[0].sunset_ts;
     } 
 });
-    */
+   
     
-   /*  $.ajax({async: false ,
+    $.ajax({async: false ,
  url:link[3], success: function(aresults){
     report[3]=aresults;
     h[3]=aresults.current.humidity;
@@ -386,7 +389,7 @@ function checkTime(i) {
     set[3]=aresults.forecast.forecastday[0].astro.sunset;
     }
 });
-    */
+  
      
     sr=rise[1]+rise[2];
     sr=sr/2;
