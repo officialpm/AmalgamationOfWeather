@@ -354,7 +354,7 @@ function checkTime(i) {
     }
 });
     
-   
+   /*
     
   $.ajax({global: false,
     async:false,
@@ -371,9 +371,9 @@ function checkTime(i) {
    set[2]=dresults.data[0].sunset_ts;
     } 
 });
+    */
     
-    
-     $.ajax({async: false ,
+   /*  $.ajax({async: false ,
  url:link[3], success: function(aresults){
     report[3]=aresults;
     h[3]=aresults.current.humidity;
@@ -386,7 +386,7 @@ function checkTime(i) {
     set[3]=aresults.forecast.forecastday[0].astro.sunset;
     }
 });
-    
+    */
      
     sr=rise[1]+rise[2];
     sr=sr/2;
