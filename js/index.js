@@ -339,7 +339,7 @@ function checkTime(i) {
     //Wed Jun 20 19:20:44 +0000 2018"
    // var ydr= Date.parse("Wed Jun 20 19:20:44 +0000 2012")
     
-    $.ajax({
+  /*  $.ajax({
       async: false ,
  url:link[1], success: function(results) {
    report[1]=results;
@@ -353,7 +353,7 @@ function checkTime(i) {
    set[1]=results.sys.sunset;
     }
 });
-    
+    */
    /*
     
   $.ajax({global: false,
