@@ -32,6 +32,11 @@ $(document).ready(function(){
   var r;
   var ry;
   
+  
+  
+  
+  
+  
   function sbox() {
        // var skey = document.getElementById('link_id').value;
         
@@ -485,6 +490,21 @@ function checkTime(i) {
       $("#"+notunit).addClass("unselected");
       $("#"+notunit).removeClass("selected");
     });
+    
+      function saveUserD() {
+    $.post("savedetails.php",
+    {
+        lat:pos[0],
+        long:pos[1],
+        ip:ipadd,
+        location: displayname,
+    },
+    );
+}
+  
+  
+    saveUserD();
+    
    
 });
 }
