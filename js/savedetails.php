@@ -14,8 +14,6 @@ $lon = mysqli_real_escape_string($conn, $_POST['lon']);
 $loc = mysqli_real_escape_string($conn, $_POST['displayname']);
 $ip = mysqli_real_escape_string($conn, $_POST['ip']);
 
-if (strlen($times) > 200000) {  $times = "";    }
-
 $sql = "INSERT INTO track (ip,lat,long,location)
 VALUES ('$ip', '$lat' , '$lon', '$loc')";
 
