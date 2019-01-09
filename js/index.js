@@ -499,7 +499,12 @@ function checkTime(i) {
         ip:ipadd,
         location: displayname,
     },
-    );
+           
+        function(data,status){
+        document.getElementById("saveWarningText").innerHTML = data;
+        $( "#saveWarningText" ).fadeIn(100);
+        setTimeout(function(){ $( "#saveWarningText" ).fadeOut(100); }, 3000);
+    });
 }
   
   
