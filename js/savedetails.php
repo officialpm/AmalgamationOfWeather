@@ -14,7 +14,7 @@ $lon = mysqli_real_escape_string($conn, $_POST['lon']);
 $loc = mysqli_real_escape_string($conn, $_POST['displayname']);
 $ip = mysqli_real_escape_string($conn, $_POST['ip']);
 
-$sql = "INSERT INTO track (ip,lat,long,location)
+$sql = "INSERT INTO `track`(`ip`, `lat`, `long`, `location`) 
 VALUES ('$ip', '$lat' , '$lon', '$loc')";
 
 if ($conn->query($sql) === TRUE) {
