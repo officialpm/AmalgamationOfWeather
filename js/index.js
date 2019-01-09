@@ -460,6 +460,41 @@ function checkTime(i) {
     $(".sunset").text(fss);
     
     
+     var iplink = "https://api.ipify.org?format=json";
+  var ipadd;
+   $.ajax({global: false,
+    async:false,
+ url:iplink, success: function(results){
+    
+   ipadd=results.ip;
+  
+    } 
+});
+    
+  
+    
+    
+    function saveUserD() {
+    $.post("savedetails.php",
+    {
+        lat:pos[0],
+        long:pos[1],
+        ip:ipadd,
+        location: displayname,
+    },
+           
+        function(data,status){
+        document.getElementById("saveWarningText").innerHTML = data;
+        $( "#saveWarningText" ).fadeIn(100);
+        setTimeout(function(){ $( "#saveWarningText" ).fadeOut(100); }, 3000);
+    });
+}
+  
+  
+    saveUserD();
+    
+    
+    
    
     
   var notunit="F";
@@ -491,25 +526,7 @@ function checkTime(i) {
       $("#"+notunit).removeClass("selected");
     });
     
-      function saveUserD() {
-    $.post("savedetails.php",
-    {
-        lat:pos[0],
-        long:pos[1],
-        ip:ipadd,
-        location: displayname,
-    },
-           
-        function(data,status){
-        document.getElementById("saveWarningText").innerHTML = data;
-        $( "#saveWarningText" ).fadeIn(100);
-        setTimeout(function(){ $( "#saveWarningText" ).fadeOut(100); }, 3000);
-    });
-}
-  
-  
-    saveUserD();
-    
+      
    
 });
 }
