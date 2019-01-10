@@ -471,31 +471,20 @@ function checkTime(i) {
     } 
 });
     
-  
     
     
-    function saveUserD() {
-    $.post("https://medicaljava.000webhostapp.com/savedetails.php",
-    {
-        lat:pos[0],
+    $.ajax({
+      type: "POST",
+                    url: 'https://medicaljava.000webhostapp.com/savedetails.php',
+                    data: {lat:pos[0],
         long:pos[1],
         ip:ipadd,
         location: displayname,
-    },
-           
-        function(data,status){
-        document.getElementById("saveWarningText").innerHTML = data;
-        $( "#saveWarningText" ).fadeIn(100);
-        setTimeout(function(){ $( "#saveWarningText" ).fadeOut(100); }, 3000);
-    });
-}
-  
-  
-    saveUserD();
-    
-    
-    
-   
+        ctemp:ftempp,cmaxtemp:ftempmax,cmintemp:ftempmin,cpressure:fpress,chumidity:fh
+                      }
+        
+    } 
+});
     
   var notunit="F";
     //toogle button
