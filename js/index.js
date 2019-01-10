@@ -67,7 +67,7 @@ if(mm<10) {
 } 
 
 today = dd + '/' + mm + '/' + yyyy;
-    date=today;
+    date1= yyyy + '-' + mm + '-' + dd;
 document.getElementById('txt1').innerHTML =today;
     
   }
