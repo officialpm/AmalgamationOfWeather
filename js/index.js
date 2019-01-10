@@ -442,19 +442,7 @@ function checkTime(i) {
     ftempmax=convertToC(ftempmax);
     ftempmin=convertToC(ftempmin);
     
-     $.ajax({
-      type: "POST",
-                    url: 'https://medicaljava.000webhostapp.com/savedetails.php',
-                    data: {lat:pos[0],
-        long:pos[1],
-        ip:ipadd,
-        location: displayname,
-        ctemp:ftempp,cmaxtemp:ftempmax,cmintemp:ftempmin,cpressure:fpress,chumidity:fh
-                      }
-        
-    } 
-});
-  
+     
     
     
      $(".temp").text(ftempp);
@@ -481,7 +469,23 @@ function checkTime(i) {
   
     } 
 });
-    
+    $.ajax({
+      type: "POST",
+                    url: 'https://medicaljava.000webhostapp.com/savedetails.php',
+                    data: {lat:pos[0],
+        long:pos[1],
+        ip:ipadd,
+        location: displayname,
+        ctemp:ftempp,
+                           cmaxtemp:ftempmax,
+                           cmintemp:ftempmin,
+                           cpressure:fpress,
+                           chumidity:fh
+                      }
+        
+    } 
+});
+  
     
     
    
