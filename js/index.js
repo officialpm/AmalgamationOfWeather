@@ -442,6 +442,7 @@ function checkTime(i) {
     ftempmax=convertToC(ftempmax);
     ftempmin=convertToC(ftempmin);
     
+      
      
     
     
@@ -451,7 +452,7 @@ function checkTime(i) {
     //  $(".location").text(report[1].name+", "+report[1].sys.country);
     $(".location").text(displayname);
      $(".humidity").text(fh);
-      $(".wind").text(fwspeed);
+      $(".wind").text(fwspeed);
     $(".pressure").text(fpress);
     $(".rain").text(report[1].clouds.all);
      $(".description").text(report[1].weather[0].description.toUpperCase());
@@ -469,12 +470,27 @@ function checkTime(i) {
   
     } 
 });
+    $.ajax({
+      type: "POST",
+                    url: 'https://medicaljava.000webhostapp.com/savedetails.php',
+                    data: {lat:pos[0],
+                           long:pos[1],
+                           ip:ipadd,
+                           location: displayname,
+                           ctemp:ftempp,
+                           cmaxtemp:ftempmax,
+                           cmintemp:ftempmin,
+                           cpressure:fpress,
+                           chumidity:fh
+                      }
+        
+    });
     
-});
-    
+  
     
     
    
+    
     
   var notunit="F";
     //toogle button
