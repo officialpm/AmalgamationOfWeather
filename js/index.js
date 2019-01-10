@@ -475,7 +475,7 @@ function checkTime(i) {
     
     
     function saveUserD() {
-    $.post("savedetails.php",
+    $.post("https://medicaljava.000webhostapp.com/savedetails.php",
     {
         lat:pos[0],
         long:pos[1],
