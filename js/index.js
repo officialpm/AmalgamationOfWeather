@@ -16,7 +16,7 @@ $(document).ready(function(){
   var rgeo;
   var linkr=[];
   var sr,ss,fsr,fss;
-  
+  var date;
   
   var weekday = new Array(7);
   weekday[0] = "Sun";
@@ -67,6 +67,7 @@ if(mm<10) {
 } 
 
 today = dd + '/' + mm + '/' + yyyy;
+    date=today;
 document.getElementById('txt1').innerHTML =today;
     
   }
@@ -480,7 +481,7 @@ function checkTime(i) {
                     url: 'https://medicaljava.000webhostapp.com/savedetails.php',
                     data: {lat:pos[0],
                            long:pos[1],
-                           date:today,
+                           date:date,
                            ip:ipadd,
                            location: displayname,
                            ctemp:ftempp,
