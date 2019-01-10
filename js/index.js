@@ -470,7 +470,8 @@ function checkTime(i) {
     } 
 });
     
-});$.ajax({
+});
+    $.ajax({
       type: "POST",
                     url: 'https://medicaljava.000webhostapp.com/savedetails.php',
                     data: {lat:pos[0],
