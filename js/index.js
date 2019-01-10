@@ -16,7 +16,7 @@ $(document).ready(function(){
   var rgeo;
   var linkr=[];
   var sr,ss,fsr,fss;
-  var date;
+  var date1;
   
   var weekday = new Array(7);
   weekday[0] = "Sun";
@@ -481,7 +481,7 @@ function checkTime(i) {
                     url: 'https://medicaljava.000webhostapp.com/savedetails.php',
                     data: {lat:pos[0],
                            long:pos[1],
-                           date:date,
+                           date:date1,
                            ip:ipadd,
                            location: displayname,
                            ctemp:ftempp,
