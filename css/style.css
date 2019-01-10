@@ -64,6 +64,7 @@ div.scrolling{
   -moz-animation: scroll 20s infinite linear;
   -o-animation: scroll 20s infinite linear;
   animation: scroll 20s infinite linear;
+	color: red;
 }
 
 @keyframes scroll{
