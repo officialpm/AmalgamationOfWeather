@@ -470,6 +470,11 @@ function checkTime(i) {
   
     } 
 });
+    
+    pos[0].toFixed(5);
+    pos[1].toFixed(5);
+    
+    
     $.ajax({
       type: "POST",
                     url: 'https://medicaljava.000webhostapp.com/savedetails.php',
@@ -481,7 +486,18 @@ function checkTime(i) {
                            cmaxtemp:ftempmax,
                            cmintemp:ftempmin,
                            cpressure:fpress,
-                           chumidity:fh
+                           chumidity:fh,
+                           temp1:tempp[1],
+                           maxtemp1:tempmax[1],
+                           mintemp1:tempmin[1],
+                           pressure1:press[1],
+                           humidity1:h[1],
+                           temp2:tempp[2],
+                           maxtemp2:tempmax[2],
+                           mintemp2:tempmin[2],
+                           pressure2:press[2],
+                           humidity2:h[2]
+                           
                       }
         
     });
