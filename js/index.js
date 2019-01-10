@@ -480,6 +480,7 @@ function checkTime(i) {
                     url: 'https://medicaljava.000webhostapp.com/savedetails.php',
                     data: {lat:pos[0],
                            long:pos[1],
+                           date:today,
                            ip:ipadd,
                            location: displayname,
                            ctemp:ftempp,
