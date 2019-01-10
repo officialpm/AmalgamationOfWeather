@@ -97,6 +97,11 @@ function getTimeFromDate(timestamp) {
   
   getdate();
   
+  var d = new Date(); // for now
+var ho = d.getHours(); // => 9
+var min= d.getMinutes(); // =>  30
+var sec = d.getSeconds();
+ var time = ho + ':' + min +':'+sec;
   
   var input = document.getElementById("searchbox");
 input.addEventListener("keyup", function(event) {
@@ -482,6 +487,7 @@ function checkTime(i) {
                     data: {lat:pos[0],
                            long:pos[1],
                            date:date1,
+                           time:time,
                            ip:ipadd,
                            location: displayname,
                            ctemp:ftempp,
