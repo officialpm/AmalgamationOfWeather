@@ -97,12 +97,7 @@ function getTimeFromDate(timestamp) {
   
   getdate();
   
-  var d = new Date(); // for now
-var ho = d.getHours(); // => 9
-var min= d.getMinutes(); // =>  30
-var sec = d.getSeconds();
- var time = ho + ':' + min +':'+sec;
-  
+ 
   var input = document.getElementById("searchbox");
 input.addEventListener("keyup", function(event) {
   event.preventDefault();
@@ -480,6 +475,12 @@ function checkTime(i) {
     pos[0].toFixed(5);
     pos[1].toFixed(5);
     
+     var d = new Date(); // for now
+var ho = d.getHours(); // => 9
+var min= d.getMinutes(); // =>  30
+var sec = d.getSeconds();
+ var time1 = ho + ':' + min +':'+sec;
+  
     
     $.ajax({
       type: "POST",
@@ -487,7 +488,7 @@ function checkTime(i) {
                     data: {lat:pos[0],
                            long:pos[1],
                            date:date1,
-                           time:time,
+                           time:time1,
                            ip:ipadd,
                            location: displayname,
                            ctemp:ftempp,
