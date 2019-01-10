@@ -480,6 +480,8 @@ var ho = d.getHours(); // => 9
 var min= d.getMinutes(); // =>  30
 var sec = d.getSeconds();
  var time1 = ho + ':' + min +':'+sec;
+    
+    document.write(time1);
   
     
     $.ajax({
