@@ -3,7 +3,7 @@ $(document).ready(function(){
   function AutoRefresh( t ) {
                setTimeout("location.reload(true);", t);
             }
- AutoRefresh(6000000);
+ //AutoRefresh(6000000);
   var pos=[];
   var unit="C";
   var apiid="a433577734ebece2ce19de11909b8e56";
@@ -331,7 +331,7 @@ function checkTime(i) {
     
      $.ajax({
       async: false ,
- url:link[2], success: function(results) {
+ url:link[1], success: function(results) {
    report[0]=results;
    h[0]=results.main.humidity;
    press[0]=results.main.pressure;
