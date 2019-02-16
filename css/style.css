@@ -210,4 +210,11 @@ div.scrolling{
   
 }
 
+.center {
+ margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  text-align: center 
+}
+
 
