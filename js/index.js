@@ -351,7 +351,7 @@ function checkTime(i) {
     
    $.ajax({
       async: false ,
- url:link[2], success: function(results) {
+ url:link[1], success: function(results) {
    report[1]=results;
    h[1]=results.main.humidity;
    press[1]=results.main.pressure;
@@ -367,7 +367,7 @@ function checkTime(i) {
     
   $.ajax({global: false,
     async:false,
- url:link[2], success: function(dresults){
+ url:link[1], success: function(dresults){
     report[2]=dresults;
    h[2]=dresults.data[0].rh;
    press[2]=dresults.data[0].pres;
