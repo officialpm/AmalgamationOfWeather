@@ -451,7 +451,7 @@ function checkTime(i) {
     $(".max").text(ftempmax);
       $(".min").text(ftempmin);
     //  $(".location").text(report[1].name+", "+report[1].sys.country);
-    $(".location").text(displayname);
+    $(".location").text(rcity);
      $(".humidity").text(fh);
       $(".wind").text(fwspeed);
     $(".pressure").text(fpress);
