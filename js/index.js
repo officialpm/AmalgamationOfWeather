@@ -331,7 +331,7 @@ function checkTime(i) {
     
      $.ajax({
       async: false ,
- url:link[1], success: function(results) {
+ url:link[2], success: function(results) {
    report[0]=results;
    h[0]=results.main.humidity;
    press[0]=results.main.pressure;
